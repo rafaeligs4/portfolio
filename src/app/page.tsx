@@ -6,6 +6,7 @@ import { ProjectsComponent } from "./components/projects";
 import { ExperienceComponent } from './components/experience';
 import { ContactComponent } from "./components/contact";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const projects: {
   nameProject: string;
   descriptionProject: string;
@@ -56,8 +57,8 @@ export default function Home() {
     <>
     
     <HeaderComponent></HeaderComponent>
-    
-    <AboutMeSection name="Texting" imageAvatarUrl="/img/imagen_cv.jpg" description=" Ingeniero en Computación con sólida formación académica y experiencia en el diseño, desarrollo y optimización de
+
+    <AboutMeSection name="Texting" imageAvatarUrl={`${basePath}/img/imagen_cv.jpg`} description=" Ingeniero en Computación con sólida formación académica y experiencia en el diseño, desarrollo y optimización de
  soluciones tecnológicas. Actualmente me desempeño como Desarrollador Full Stack, integrando conocimientos de
  frontend, backend y bases de datos para construir aplicaciones web robustas y eficientes. Destaco por mi capacidad para
  abordar problemas complejos con soluciones escalables y alineadas a buenas prácticas de ingeniería de software"></AboutMeSection>
