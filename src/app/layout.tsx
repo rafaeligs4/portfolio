@@ -24,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Freepik - Flaticon</a> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

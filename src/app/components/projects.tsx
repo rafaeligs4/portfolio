@@ -1,0 +1,34 @@
+import { ProjectCard } from "./projectCard";
+
+interface Project{
+    nameProject: string;
+    descriptionProject: string;
+    img: string;
+    url: string;
+}
+interface ProjectComponentInterface{
+    projects: Project[];
+    nameTitle: string;
+}
+
+export const ProjectsComponent = ({projects, nameTitle}: ProjectComponentInterface) => {
+    
+    
+    const refProjects = projects.map(project => <ProjectCard 
+        nameProject={project.nameProject}
+        descriptionProject={project.descriptionProject}
+        img={project.img}
+        url={project.url}
+        key={project.nameProject}
+    ></ProjectCard>);
+
+    return <>
+    <div className="py-20 bg-[#F0F2F5] dark:bg-[#0A192F]">
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0A192F] dark:text-[#E6F1FF] mb-12">{nameTitle}</p>
+    <div className="grid sm:grid-cols-2  md:grid-cols-3 gap-1">
+    {refProjects}
+    </div>
+    </div>
+   
+    </>
+}

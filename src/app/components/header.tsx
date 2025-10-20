@@ -5,7 +5,7 @@ import { useState } from 'react';
 export const HeaderComponent = () => {
   // Estado para controlar si el menú móvil está abierto o cerrado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const nombre = "RafaelGonzalez";
   const navLinks = [
     { href: "#about", label: "Sobre mí" },
     { href: "#projects", label: "Proyectos" },
@@ -18,7 +18,7 @@ export const HeaderComponent = () => {
         
         {/* Logo o Nombre */}
         <div className="text-2xl font-bold text-[#64FFDA] tracking-wider">
-          <a href="#">{"<TuNombre />"}</a>
+          <a href="#">{`<${nombre} />`}</a>
         </div>
 
         {/* Navegación para Escritorio */}
