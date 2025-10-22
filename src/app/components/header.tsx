@@ -8,7 +8,9 @@ export const HeaderComponent = () => {
   const nombre = "RafaelGonzalez";
   const navLinks = [
     { href: "#about", label: "Sobre mí" },
+    { href: "#skills", label: "Habilidades" },
     { href: "#projects", label: "Proyectos" },
+    { href: "#experience", label: "Experiencia" },
     { href: "#contact", label: "Contacto" },
   ];
 

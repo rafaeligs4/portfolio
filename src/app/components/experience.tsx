@@ -22,12 +22,12 @@ export const ExperienceComponent = ({ titleSection, experience}: ExperienceSecti
         />)
     
         return <>
-        <div className="py-20 bg-[#F0F2F5] dark:bg-[#0A192F]">
+        <section id="experience" className="py-20 bg-[#F0F2F5] dark:bg-[#0A192F]">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0A192F] dark:text-[#E6F1FF] mb-12">{titleSection}</h2>
         <div className="flex flex-col gap-2">
         {experienceRef}
         </div>
-        </div>
+        </section>
        
         </>
 }
