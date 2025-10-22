@@ -2,7 +2,7 @@
 export const ContactComponent = ()=>{
     return <>
         <div className="py-5  bg-[#F0F2F5] dark:bg-[#0A192F]">
-        <p className="text-3xl sm:text-4xl font-bold text-center text-[#0A192F] dark:text-[#E6F1FF] mb-12">Contacto</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0A192F] dark:text-[#E6F1FF] mb-12">Contacto</h2>
         <div className="flex justify-around items-center flex-col sm:flex-row gap-10">
             {/* Sección de contacto */}
             <div>

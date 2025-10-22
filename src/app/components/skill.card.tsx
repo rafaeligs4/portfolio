@@ -1,4 +1,5 @@
-import { type Skill } from '../data/skills';
+import { Skill } from "../interfaces/data.interface";
+
 
 // La función para obtener el color de la insignia no cambia
 const getBadgeColor = (level: Skill['level']) => {
@@ -24,10 +25,13 @@ export const SkillCard = ({ name, icon, level }: Skill) => {
       <div className="w-16 h-16">
         <img src={icon} alt={`Logo de ${name}`} className="w-full h-full object-contain" />
       </div>
-
-      <p className="font-semibold text-center text-[#0A192F] dark:text-[#E6F1FF]">
+      <div className='flex flex-col gap-1'>
+      <h5 className="font-semibold text-center text-[#0A192F] dark:text-[#E6F1FF]">
         {name}
-      </p>
+      </h5>
+      <h6 className="font-semibold text-center text-[#0A192F] dark:text-[#E6F1FF]">+1 año Exp.</h6>
+      </div>
+    
     </div>
   );
 };
