@@ -17,6 +17,8 @@ export interface Skill {
     icon: string; // Ruta a la imagen desde la carpeta 'public'
     level: string;
     typeSkill: string; // Nueva propiedad para categorizar la habilidad
+    yearsOfExperience?: number; // Nueva propiedad para indicar los años de experiencia
+    moreThanYearExp?: boolean; // Nueva propiedad para indicar si es más de un año de experiencia
 }
 export interface SkillTypeName{
     [key: string]: string;

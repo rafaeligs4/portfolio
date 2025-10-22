@@ -26,10 +26,13 @@ export const SkillsSection = ({categories,skillObject,categoryObject}:SkillsSect
               {/* Iteramos sobre las habilidades de esa categoría para crear las tarjetas */}
               {skillObject[category].map((skill) => (
                 <SkillCard 
+                typeSkill={skill.typeSkill}
                   key={skill.name}
                   name={skill.name}
                   icon={skill.icon}
                   level={skill.level}
+                  yearsOfExperience={skill.yearsOfExperience}
+                  moreThanYearExp={skill.moreThanYearExp}
                 />
               ))}
             </div>
