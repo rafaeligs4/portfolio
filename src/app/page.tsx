@@ -5,6 +5,7 @@ import { SkillsSection } from './components/abilities';
 import { ProjectsComponent } from "./components/projects";
 import { ExperienceComponent } from './components/experience';
 import { ContactComponent } from "./components/contact";
+import { categories, skillName, skillsObject } from "./data/skills";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const projects: {
@@ -64,7 +65,7 @@ export default function Home() {
  abordar problemas complejos con soluciones escalables y alineadas a buenas prácticas de ingeniería de software"></AboutMeSection>
     
     
-  <SkillsSection></SkillsSection>
+  <SkillsSection categories={categories} skillObject={skillsObject} categoryObject={skillName}  ></SkillsSection>
 
 
   <ProjectsComponent projects={projects} nameTitle="Proyectos"></ProjectsComponent>
