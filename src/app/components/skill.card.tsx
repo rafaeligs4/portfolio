@@ -15,8 +15,6 @@ const getBadgeColor = (level: Skill['level']) => {
 
 // CAMBIO AQUÍ: 'icon' ahora es un string (la ruta) y no un componente 'Icon'
 export const SkillCard = ({ name, icon, level, yearsOfExperience, moreThanYearExp }: Skill) => {
-  console.log(moreThanYearExp, 'More xperience');
-  
   return (
      <div className="group relative flex flex-col items-center justify-center gap-4 p-6 bg-white dark:bg-[#112240] rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
       <div className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-semibold ${getBadgeColor(level)}`}>
@@ -32,8 +30,8 @@ export const SkillCard = ({ name, icon, level, yearsOfExperience, moreThanYearEx
         {name}
       </h5>
       {yearsOfExperience !== undefined && (
-        <h6 className="font-semibold text-center text-[#0A192F] dark:text-[#E6F1FF]">
-          {moreThanYearExp ? '+' : ''} {yearsOfExperience} {yearsOfExperience === 1 ? 'año' : 'años'} de Exp.
+        <h6 className="lg:text-[0.7rem] font-semibold text-center text-[#0A192F] dark:text-[#E6F1FF]">
+          {moreThanYearExp ? '+' : ''} {yearsOfExperience} {yearsOfExperience === 1 ? 'año' : 'años'} de Experiencia
         </h6>
       )}
       </div>

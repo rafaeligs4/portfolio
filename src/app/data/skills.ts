@@ -33,14 +33,14 @@ const skills : Skill[]  = [
     { name: 'JavaScript', icon: `${basePath}/icons/javascript.svg`, level: 'Avanzado', typeSkill: 'Frontend', yearsOfExperience: 3, moreThanYearExp: false },
     { name: 'Java', icon: `${basePath}/icons/java.svg`, level: 'Intermedio', typeSkill: 'Backend', yearsOfExperience: 3, moreThanYearExp: false },
     { name: 'PHP', icon: `${basePath}/icons/php.svg`, level: 'Básico', typeSkill: 'Backend', yearsOfExperience: 3, moreThanYearExp: false },
-
+    {name: 'Laravel', icon: `${basePath}/icons/laravel.svg`, level: 'Básico', typeSkill: 'Backend', yearsOfExperience: 2, moreThanYearExp: false},
     { name: 'React', icon: `${basePath}/icons/react.svg`, level: 'Avanzado', typeSkill: 'Frontend', yearsOfExperience: 2, moreThanYearExp: false },
     { name: 'SpringBoot', icon: `${basePath}/icons/spring.svg`, level: 'Intermedio', typeSkill: 'Backend', yearsOfExperience: 2, moreThanYearExp: true },
     { name: 'Node.js', icon: `${basePath}/icons/node.svg`, level: 'Intermedio', typeSkill: 'Backend', yearsOfExperience: 2, moreThanYearExp: false },
     { name: 'Angular', icon: `${basePath}/icons/angular.svg`, level: 'Básico', typeSkill: 'Frontend', yearsOfExperience: 3, moreThanYearExp: false },
 
     { name: 'Git', icon: `${basePath}/icons/git.svg`, level: 'Avanzado', typeSkill: 'Tools', yearsOfExperience: 3, moreThanYearExp: false },
-    { name: 'MySQL', icon: `${basePath}/icons/mysql.svg`, level: 'Intermedio', typeSkill: 'Database', yearsOfExperience: 3, moreThanYearExp: false },
+    { name: 'MySQL', icon: `${basePath}/icons/mysql.svg`, level: 'Intermedio', typeSkill: 'Backend', yearsOfExperience: 3, moreThanYearExp: false },
 ]
   export const categories = Array.from(new Set(skills.map(skill => skill.typeSkill)));
   export const skillsObject: SkillAgroupedByCategory = {};

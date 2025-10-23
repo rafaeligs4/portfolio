@@ -1,5 +1,6 @@
 
-
+"use client";
+import { useState } from 'react';
 import { SkillAgroupedByCategory, SkillTypeName } from '../interfaces/data.interface';
 import { SkillCard } from './skill.card';
 
@@ -9,6 +10,7 @@ interface SkillsSectionComponent  {
   skillObject: SkillAgroupedByCategory;
 }
 export const SkillsSection = ({categories,skillObject,categoryObject}:SkillsSectionComponent) => {
+
   return (
     <section id="skills" className="py-20 bg-[#F0F2F5] dark:bg-[#0A192F]">
       <div className="container mx-auto px-4">
@@ -17,12 +19,14 @@ export const SkillsSection = ({categories,skillObject,categoryObject}:SkillsSect
         </h2>
 
         {/* Iteramos sobre cada categoría */}
-        {categories.map((category) => (
+        <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-10'>
+  {categories.map((category) => (
           <div key={category} className="mb-12">
-            <h3 className="text-2xl font-semibold text-center text-[#3B82F6] dark:text-[#64FFDA] mb-8">
+            <h3 className="  cursor-pointer text-2xl font-semibold text-center text-[#3B82F6] dark:text-[#64FFDA] mb-8
+            ">
               {categoryObject[category]}
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className={`grid justify-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-6 ` }>
               {/* Iteramos sobre las habilidades de esa categoría para crear las tarjetas */}
               {skillObject[category].map((skill) => (
                 <SkillCard 
@@ -38,6 +42,8 @@ export const SkillsSection = ({categories,skillObject,categoryObject}:SkillsSect
             </div>
           </div>
         ))}
+        </div>
+      
       </div>
     </section>
   );
