@@ -14,6 +14,7 @@ export const ProjectsComponent = ({projects, nameTitle}: ProjectComponentInterfa
         nameProject={project.nameProject}
         descriptionProject={project.descriptionProject}
         img={project.img}
+        urlVideo={project.urlVideo}
         urlImage={project.urlImage}
         urlProject={project.urlProject}
         key={project.nameProject}

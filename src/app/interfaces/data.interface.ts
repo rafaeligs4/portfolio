@@ -12,6 +12,7 @@ export interface Project {
     urlProject: string;
     urlImage: string;
     technologies?: Skill[];
+    urlVideo?: string;
 }
 
 export interface Skill {

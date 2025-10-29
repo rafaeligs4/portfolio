@@ -17,7 +17,8 @@ export const projects: Project[] =[
     img: `${pathBase}/img/image_default.svg`,
     urlImage: `${pathBase}/img/image_default.svg`,
     technologies: getSkillsByName(['React', 'Node.js', 'MySQL']),
-    urlProject: ""
+    urlProject: "",
+    urlVideo: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     nameProject: "Proyecto 3",
