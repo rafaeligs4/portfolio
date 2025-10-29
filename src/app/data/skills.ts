@@ -3,28 +3,6 @@
 import { Skill, SkillAgroupedByCategory, SkillTypeName } from "../interfaces/data.interface";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''; // El mismo que en next.config.ts
 // Agrupamos las habilidades por categoría con tus íconos específicos.
-// export const skillsByCategory = {
-//   'Lenguajes y Maquetado': [
-//     { name: 'HTML', icon: `${basePath}/icons/html.svg`, level: 'Avanzado' },
-//     { name: 'CSS', icon: `${basePath}/icons/css.svg`, level: 'Avanzado' },
-//     { name: 'JavaScript', icon: `${basePath}/icons/javascript.svg`, level: 'Avanzado' },
-//     { name: 'Java', icon: `${basePath}/icons/java.svg`, level: 'Intermedio' },
-//     { name: 'PHP', icon: `${basePath}/icons/php.svg`, level: 'Básico' },
-//   ],
-//   'Frameworks y Librerías': [
-//     { name: 'React', icon: `${basePath}/icons/react.svg`, level: 'Avanzado' },
-//     { name: 'Spring', icon: `${basePath}/icons/spring.svg`, level: 'Intermedio' },
-//     { name: 'Node.js', icon: `${basePath}/icons/node.svg`, level: 'Intermedio' },
-//     { name: 'Angular', icon: `${basePath}/icons/angular.svg`, level: 'Básico' },
-//     { name: 'Vue.js', icon: `${basePath}/icons/vue.svg`, level: 'Básico' },
-//   ],
-//   'Herramientas y Bases de Datos': [
-//     { name: 'Git', icon: `${basePath}/icons/git.svg`, level: 'Avanzado' },
-//     { name: 'MySQL', icon: `${basePath}/icons/mysql.svg`, level: 'Intermedio' },
-//     { name: 'PostgreSQL', icon: `${basePath}/icons/postgres.svg`, level: 'Intermedio' },
-//   ],
-// };
-
 export const skillName: SkillTypeName = {"Frontend": 'Desarrollo Frontend', "Backend": 'Desarollo Backend', "Tools": "Herramientas"};
 
 const skills : Skill[]  = [
@@ -48,3 +26,7 @@ const skills : Skill[]  = [
   categories.forEach(category => {
     skillsObject[category] = skills.filter(skill => skill.typeSkill === category);
   });
+
+  export const  getSkillsByName = (names: string[]): Skill[] => {
+    return skills.filter(skill => names.includes(skill.name));
+  }

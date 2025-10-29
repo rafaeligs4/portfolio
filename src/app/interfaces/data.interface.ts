@@ -9,7 +9,9 @@ export interface Project {
     nameProject: string;
     descriptionProject: string;
     img: string;
-    url: string;
+    urlProject: string;
+    urlImage: string;
+    technologies?: Skill[];
 }
 
 export interface Skill {
