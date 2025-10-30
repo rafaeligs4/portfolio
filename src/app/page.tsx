@@ -7,27 +7,12 @@ import { ExperienceComponent } from './components/experience';
 import { ContactComponent } from "./components/contact";
 import { categories, skillName, skillsObject } from "./data/skills";
 import { projects } from "./data/projects";
+import {  ExperienceData } from "./interfaces/data.interface";
+import { experience } from "./data/experience";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-const experience:  {
-    dateWork: string[];
-    nameEnterprise: string;
-    descriptionJob: string;
 
-}[]  = [
-  {
-    dateWork: ['2023-09-06','2025-08-11'],
-    descriptionJob: 'Desarrollador full Stack',
-    nameEnterprise: 'Fibex Telecom C.A'
-  },
-    {
-    dateWork: ['2023-09-06','2025-08-11'],
-    descriptionJob: 'Especialista de Apliaciones',
-    nameEnterprise: 'Encava'
-  }
-
-];
 
 
 export default function Home() {

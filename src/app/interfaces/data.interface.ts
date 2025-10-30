@@ -34,3 +34,11 @@ interface LevelSkill {
 export interface SkillAgroupedByCategory  {
     [key: string]: Skill[];
 }
+
+export interface ExperienceData  {
+    dateWork: string[];
+    nameEnterprise: string;
+    descriptionJob: string;
+    nameRole?: string;
+    currentJob?: boolean;
+}
